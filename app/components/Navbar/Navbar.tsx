@@ -4,15 +4,23 @@ import Link from 'next/link';
 
 const Navbar = () => {
   const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
+  const [isResourcesDropdownOpen, setIsResourcesDropdownOpen] = useState(false); // For Resources Dropdown
   const [selectedSection, setSelectedSection] = useState('Capabilities'); // Default selected section is Capabilities
 
   const toggleProductDropdown = () => {
     setIsProductDropdownOpen(!isProductDropdownOpen);
+    setIsResourcesDropdownOpen(false); // Close Resources dropdown when Product is open
+  };
+
+  const toggleResourcesDropdown = () => {
+    setIsResourcesDropdownOpen(!isResourcesDropdownOpen);
+    setIsProductDropdownOpen(false); // Close Product dropdown when Resources is open
   };
 
   const handleSectionClick = (section: any) => {
     setSelectedSection(section); // Set the selected section when a button is clicked
   };
+
 
   const renderProducts = () => {
     switch (selectedSection) {
@@ -91,18 +99,67 @@ const Navbar = () => {
         );
       case 'Integrations':
         return (
+          <div className="grid grid-cols-3 gap-x-44">
           <div className="space-y-2">
-            <h3 className="font-semibold text-gray-700">Integrations</h3>
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Slack</span></Link><br />
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Google Drive</span></Link><br />
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Jira</span></Link><br />
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Zapier</span></Link>
+            <Link href="#"><span className="text-gray-500 hover:text-gray-900">ClickUp API</span></Link><br />
+            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Salesforce</span></Link><br />
+            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Hubspot</span></Link><br />
+            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Zendesk</span></Link><br />
+            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Zapier</span></Link><br />
+            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Make</span></Link><br />
+            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Trello</span></Link><br />
+            
           </div>
+          <div className="space-y-2">
+            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Slack</span></Link><br />
+            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Gsuite</span></Link><br />
+            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Dropbox</span></Link><br />
+            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Zoom</span></Link><br />
+            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Loom</span></Link><br />
+            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Microsoft Teams</span></Link><br />
+            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Calendly</span></Link>
+          </div>
+          <div className="space-y-2">
+            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Jira</span></Link><br />
+            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Figma</span></Link><br />
+            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Github</span></Link><br />
+            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Gitlab</span></Link><br />
+            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Bitbuket</span></Link><br />
+            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Sentry</span></Link><br />
+            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Toggl</span></Link>
+          </div>
+        </div>
         );
       default:
         return null;
     }
   };
+  const renderResourcesDropdown = () => {
+    return (
+      <div className="grid grid-cols-3 gap-x-10 p-6">
+        <div className="space-y-2">
+          <h3 className="font-semibold text-gray-700">Learn</h3>
+          <Link href="#"><span className="text-gray-500 hover:text-gray-900">University</span></Link><br />
+          <Link href="#"><span className="text-gray-500 hover:text-gray-900">Demos</span></Link><br />
+          <Link href="#"><span className="text-gray-500 hover:text-gray-900">Video tutorials</span></Link><br />
+          <Link href="#"><span className="text-gray-500 hover:text-gray-900">Webinars</span></Link>
+        </div>
+        <div className="space-y-2">
+          <h3 className="font-semibold text-gray-700">Discover</h3>
+          <Link href="#"><span className="text-gray-500 hover:text-gray-900">Blog</span></Link><br />
+          <Link href="#"><span className="text-gray-500 hover:text-gray-900">Customer stories</span></Link><br />
+          <Link href="#"><span className="text-gray-500 hover:text-gray-900">Virtual Summits</span></Link><br />
+          <Link href="#"><span className="text-gray-500 hover:text-gray-900">Productivity quiz</span></Link>
+        </div>
+        <div className="space-y-2">
+          <h3 className="font-semibold text-gray-700">Services</h3>
+          <Link href="#"><span className="text-gray-500 hover:text-gray-900">Partner services</span></Link><br />
+          <Link href="#"><span className="text-gray-500 hover:text-gray-900">Professional services</span></Link>
+        </div>
+      </div>
+    );
+  };
+  
 
   return (
     <nav className="flex items-center justify-between px-6 py-4 shadow-md bg-white">
@@ -131,9 +188,12 @@ const Navbar = () => {
           <Link href="#">
             <span className="text-gray-600 hover:text-gray-900">Solutions</span>
           </Link>
-          <Link href="#">
-            <span className="text-gray-600 hover:text-gray-900">Resources</span>
-          </Link>
+          <button
+            onClick={toggleResourcesDropdown}
+            className="text-gray-600 hover:text-gray-900"
+          >
+            Resources
+          </button>
           <Link href="#">
             <span className="text-gray-600 hover:text-gray-900">Pricing</span>
           </Link>
@@ -171,6 +231,13 @@ const Navbar = () => {
             <div className="grid grid-cols-3 gap-x-12">
               {renderProducts()}
             </div>
+          </div>
+        )}
+
+        {/* Resources Dropdown */}
+        {isResourcesDropdownOpen && (
+          <div className="absolute bg-white shadow-lg border border-gray-300 rounded-lg mt-2 p-6 w-[1000px] z-10">
+            {renderResourcesDropdown()}
           </div>
         )}
       </div>
