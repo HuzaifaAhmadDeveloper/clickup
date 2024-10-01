@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';
 import Link from 'next/link';
-
+import { MdArrowDropDown } from "react-icons/md";
 const Navbar = () => {
   const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
   const [selectedSection, setSelectedSection] = useState('Capabilities'); // Default selected section is Capabilities
@@ -120,19 +120,21 @@ const Navbar = () => {
       </div>
 
       {/* Section 2: Product Links */}
-      <div className="relative">
-        <div className="hidden md:flex space-x-4">
-          <button
+      <div className="relative block p-2 px-8 rounded-full max-w-lg  
+             border border-gray-200">
+        <div className="hidden md:flex space-x-3">
+        <button
             onClick={toggleProductDropdown}
-            className="text-gray-600 hover:text-gray-900"
+            className="flex items-center text-gray-600 hover:text-gray-900 "
           >
             Product
+            <MdArrowDropDown className={`ml-1 transition-transform ${isProductDropdownOpen ? 'rotate-180' : ''}`} />
           </button>
-          <Link href="#">
-            <span className="text-gray-600 hover:text-gray-900">Solutions</span>
+          <Link href="#" className='flex items-center'>
+            <span className="text-gray-600 hover:text-gray-900">Solutions</span><MdArrowDropDown />
           </Link>
-          <Link href="#">
-            <span className="text-gray-600 hover:text-gray-900">Resources</span>
+          <Link href="#" className='flex items-center'>
+            <span className="text-gray-600 hover:text-gray-900">Resources</span><MdArrowDropDown />
           </Link>
           <Link href="#">
             <span className="text-gray-600 hover:text-gray-900">Pricing</span>
@@ -176,7 +178,7 @@ const Navbar = () => {
       </div>
 
       {/* Section 3: Contact Sales */}
-      <div className="hidden md:flex items-center border border-gray-300 rounded-full px-4 py-2">
+      <div className="hidden md:flex items-center border border-gray-200 rounded-full px-4 py-2">
         <Link href="#">
           <span className="text-gray-600 hover:text-gray-900">Contact Sales</span>
         </Link>
@@ -185,7 +187,7 @@ const Navbar = () => {
       {/* Section 4: Login and Sign-Up */}
       <div className="flex items-center space-x-4">
         <Link href="#">
-          <span className="border border-gray-300 rounded-full px-4 py-2 text-gray-600 hover:text-gray-900">Log In</span>
+          <span className="border border-gray-200 rounded-full px-4 py-2 text-gray-600 hover:text-gray-900">Log In</span>
         </Link>
         <Link href="#">
           <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-full px-4 py-2 hover:from-purple-600 hover:to-indigo-600">
