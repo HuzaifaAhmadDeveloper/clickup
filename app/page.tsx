@@ -4,6 +4,9 @@ import BannerContent from "./components/BannerContent/BannerContent";
 import SaveTime from "./components/SaveTime/SaveTime";
 import ImproveCollaboration from "./components/ImproveCollaboration/ImproveCollaboration";
 import ClickUpBrain from "./components/ClickUpBrain/ClickUpBrain";
+import Navbar from "./components/Navbar/Navbar";
+// import Test from "./components/test/page";
+
 export default function Home() {
   return (
     <>
