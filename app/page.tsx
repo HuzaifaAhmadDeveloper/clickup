@@ -10,7 +10,7 @@ import Navbar from "./components/Navbar/Navbar";
 export default function Home() {
   return (
     <>
-      <h1>Huzaifa</h1>  
+      <Navbar/> 
       <BannerContent/>
       <IconComponent/>
       <SaveTime/>
