@@ -2,7 +2,7 @@ import React from "react";
 
 const BannerContent = () => {
     return (
-        <div className="flex flex-col justify-center items-center  space-y-6 mb-8 ">
+        <div className="flex flex-col justify-center items-center  space-y-6 mb-8 mt-16">
             {/* Main Heading */}
             <h1 className="text-black text-6xl font-bold text-center max-w-5xl">
                 The everything app for work

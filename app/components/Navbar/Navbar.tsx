@@ -4,20 +4,32 @@ import Link from 'next/link';
 
 const Navbar = () => {
   const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
-  const [isResourcesDropdownOpen, setIsResourcesDropdownOpen] = useState(false); // For Resources Dropdown
-  const [selectedSection, setSelectedSection] = useState('Capabilities'); // Default selected section is Capabilities
+  const [isSolutionsDropdownOpen, setIsSolutionsDropdownOpen] = useState(false);
+  const [isResourcesDropdownOpen, setIsResourcesDropdownOpen] = useState(false);
+
+  // Declare the selectedSection state
+  const [selectedSection, setSelectedSection] = useState('Capabilities');
+  const [isSelected, issetSelected] = useState('Team');
 
   const toggleProductDropdown = () => {
     setIsProductDropdownOpen(!isProductDropdownOpen);
-    setIsResourcesDropdownOpen(false); // Close Resources dropdown when Product is open
+    setIsSolutionsDropdownOpen(false); // Close other dropdowns
+    setIsResourcesDropdownOpen(false); // Close other dropdowns
+  };
+
+  const toggleSolutionsDropdown = () => {
+    setIsSolutionsDropdownOpen(!isSolutionsDropdownOpen);
+    setIsProductDropdownOpen(false); // Close other dropdowns
+    setIsResourcesDropdownOpen(false); // Close other dropdowns
   };
 
   const toggleResourcesDropdown = () => {
     setIsResourcesDropdownOpen(!isResourcesDropdownOpen);
-    setIsProductDropdownOpen(false); // Close Product dropdown when Resources is open
+    setIsProductDropdownOpen(false); // Close other dropdowns
+    setIsSolutionsDropdownOpen(false); // Close other dropdowns
   };
 
-  const handleSectionClick = (section: any) => {
+  const handleSectionClick = (section: string) => {
     setSelectedSection(section); // Set the selected section when a button is clicked
   };
 
@@ -134,6 +146,51 @@ const Navbar = () => {
         return null;
     }
   };
+
+  const renderSolutions = () => {
+    switch (isSelected) {
+      case 'Team':
+        return (
+          <div className="grid grid-cols-3 gap-2 gap-x-52 p-4">
+            <div className="border border-gray-300 rounded-lg p-4 hover:shadow-md transition-shadow w-40 h-44">
+              <h3 className="font-semibold text-gray-700 mb-2">Project Management</h3>
+              <p className="text-gray-500 text-sm overflow-hidden">Empower teams to achieve goals with efficient, clear project planning.</p>
+            </div>
+            <div className="border border-gray-300 rounded-lg p-4 hover:shadow-md transition-shadow w-40 h-44">
+              <h3 className="font-semibold text-gray-700 mb-2">Product Development</h3>
+              <p className="text-gray-500 text-sm overflow-hidden">Accelerate innovation for faster, effective team-led product launches.</p>
+            </div>
+            <div className="border border-gray-300 rounded-lg p-4 hover:shadow-md transition-shadow w-40 h-44">
+              <h3 className="font-semibold text-gray-700 mb-2">Operations</h3>
+              <p className="text-gray-500 text-sm overflow-hidden">Optimize workflows for increased team productivity and efficiency.</p>
+            </div>
+            <div className="border border-gray-300 rounded-lg p-4 hover:shadow-md transition-shadow w-40 h-44">
+              <h3 className="font-semibold text-gray-700 mb-2">IT</h3>
+              <p className="text-gray-500 text-sm overflow-hidden">Improve IT operations with solutions fostering teamwork and efficiency.</p>
+            </div>
+            <div className="border border-gray-300 rounded-lg p-4 hover:shadow-md transition-shadow w-40 h-44">
+              <h3 className="font-semibold text-gray-700 mb-2">Marketing</h3>
+              <p className="text-gray-500 text-sm overflow-hidden">Drive marketing outcomes through collaborative strategy and teamwork.</p>
+            </div>
+            <div className="border border-gray-300 rounded-lg p-4 hover:shadow-md transition-shadow w-40 h-44">
+              <h3 className="font-semibold text-gray-700 mb-2">Human Resources</h3>
+              <p className="text-gray-500 text-sm overflow-hidden">Enhance team engagement and efficiency with streamlined processes.</p>
+            </div>
+            <div className="border border-gray-300 rounded-lg p-4 hover:shadow-md transition-shadow w-40 h-44">
+              <h3 className="font-semibold text-gray-700 mb-2">Sales</h3>
+              <p className="text-gray-500 text-sm overflow-hidden">Maximize sales with tools enhancing team efficiency and insight.</p>
+            </div>
+          </div>
+        );
+      case 'Company Type':
+        return <h1></h1>;
+      case 'Templates':
+        return <h1></h1>;
+      default:
+        return null;
+    }
+  };
+    
   const renderResourcesDropdown = () => {
     return (
       <div className="grid grid-cols-3 gap-x-10 p-6">
@@ -185,9 +242,12 @@ const Navbar = () => {
           >
             Product
           </button>
-          <Link href="#">
-            <span className="text-gray-600 hover:text-gray-900">Solutions</span>
-          </Link>
+          <button
+            onClick={toggleSolutionsDropdown}
+            className="text-gray-600 hover:text-gray-900"
+          >
+            Solutions
+          </button>
           <button
             onClick={toggleResourcesDropdown}
             className="text-gray-600 hover:text-gray-900"
@@ -230,6 +290,38 @@ const Navbar = () => {
             {/* Right columns showing products based on the selected section */}
             <div className="grid grid-cols-3 gap-x-12">
               {renderProducts()}
+            </div>
+          </div>
+        )}
+
+        {/* Solutions Dropdown */}
+        {isSolutionsDropdownOpen && (
+          <div className="absolute bg-white shadow-lg border border-gray-300 rounded-lg mt-2 p-6 grid grid-cols-4 gap-x-12 w-[1000px] z-10">
+            {/* Left column with buttons */}
+            <div className="flex flex-col space-y-4 items-start">
+              <button
+                className={`px-4 py-2 rounded-lg ${selectedSection === 'Team' ? 'bg-gray-300' : 'bg-gray-200'} hover:bg-gray-300`}
+                onClick={() => handleSectionClick('Team')}
+              >
+                Team
+              </button>
+              <button
+                className={`px-4 py-2 rounded-lg ${selectedSection === 'Company type' ? 'bg-gray-300' : 'bg-gray-200'} hover:bg-gray-300`}
+                onClick={() => handleSectionClick('Company type')}
+              >
+                Company type
+              </button>
+              <button
+                className={`px-4 py-2 rounded-lg ${selectedSection === 'Templates' ? 'bg-gray-300' : 'bg-gray-200'} hover:bg-gray-300`}
+                onClick={() => handleSectionClick('Templates')}
+              >
+                Templates
+              </button>
+            </div>
+
+            {/* Right columns showing products based on the selected section */}
+            <div className="grid grid-cols-3 gap-x-12">
+              {renderSolutions()}
             </div>
           </div>
         )}

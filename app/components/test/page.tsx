@@ -1,16 +1,34 @@
-"use client"
+"use client";
 import { useState } from 'react';
 import Link from 'next/link';
 
 const Navbar = () => {
   const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
-  const [selectedSection, setSelectedSection] = useState('Capabilities'); // Default selected section is Capabilities
+  const [isSolutionsDropdownOpen, setIsSolutionsDropdownOpen] = useState(false);
+  const [isResourcesDropdownOpen, setIsResourcesDropdownOpen] = useState(false);
+
+  // Declare the selectedSection state
+  const [selectedSection, setSelectedSection] = useState('Capabilities');
 
   const toggleProductDropdown = () => {
     setIsProductDropdownOpen(!isProductDropdownOpen);
+    setIsSolutionsDropdownOpen(false); // Close other dropdowns
+    setIsResourcesDropdownOpen(false); // Close other dropdowns
   };
 
-  const handleSectionClick = (section:any) => {
+  const toggleSolutionsDropdown = () => {
+    setIsSolutionsDropdownOpen(!isSolutionsDropdownOpen);
+    setIsProductDropdownOpen(false); // Close other dropdowns
+    setIsResourcesDropdownOpen(false); // Close other dropdowns
+  };
+
+  const toggleResourcesDropdown = () => {
+    setIsResourcesDropdownOpen(!isResourcesDropdownOpen);
+    setIsProductDropdownOpen(false); // Close other dropdowns
+    setIsSolutionsDropdownOpen(false); // Close other dropdowns
+  };
+
+  const handleSectionClick = (section: string) => {
     setSelectedSection(section); // Set the selected section when a button is clicked
   };
 
@@ -18,113 +36,56 @@ const Navbar = () => {
     switch (selectedSection) {
       case 'Capabilities':
         return (
-          <>
-          <div className="grid grid-cols-3 gap-4">
-           <div className="space-y-2">
-              <h3 className="font-semibold">Project Management</h3>
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Tasks</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Portfolios</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Board views</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Gantt charts</span></Link>
-            </div>
+          <div className="grid grid-cols-3 gap-x-40">
+            {/* Add your product categories here */}
             <div className="space-y-2">
-              <h3 className="font-semibold">Product Development</h3>
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Sprints</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Sprint Reports</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Kanban</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Roadmap & Backlog</span></Link>
+              <h3 className="font-semibold text-gray-700">Project Management</h3>
+              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Tasks</span></Link><br />
+              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Portfolios</span></Link><br />
+              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Board views</span></Link><br />
+              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Gantt charts</span></Link>
             </div>
-            <div className="space-y-2">
-              <h3 className="font-semibold">Knowledge Management</h3>
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Docs</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Wikis</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Ask AI</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Connected search</span></Link>
-            </div>
-            <div className="space-y-2">
-              <h3 className="font-semibold">Resource Management</h3>
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Time Tracking</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Workload views</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Goals</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Dashboards</span></Link>
-            </div>
-            <div className="space-y-2">
-              <h3 className="font-semibold">Collaboration</h3>
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Docs</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Whiteboards</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Chat</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Inbox</span></Link>
-            </div>
-            <div className="space-y-2">
-              <h3 className="font-semibold">Workflow</h3>
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Automations</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Forms</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Custom fields</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Custom statuses</span></Link>
-            </div>
-            </div>
-          </>
-        );
-      case 'All Features':
-        return (
-          <>
-            <div className="space-y-2">
-           
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Tasks</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Docs</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Chat</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">AI</span></Link>
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Mind maps</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Custom fields</span></Link><br />
-              </div>
-              <div className="space-y-2">
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Whiteboards</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Dashboards</span></Link>
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Gantt</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Proofing</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Email</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Pulse</span></Link>
-              </div>
-              <div className="space-y-2">
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Automations</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Calender View</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Goals</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Milestones</span></Link>
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Time tracking</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Time estimates</span></Link><br />
-              </div>
-              <div className="space-y-2">
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Forms</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Kanban view</span></Link>
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Sprints</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Clips</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Connected search</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Reminders</span></Link>
-              
-              </div>
-          </>
-        );
-      case 'Integrations':
-        return (
-          <>
-            <div className="space-y-2">
-              <h3 className="font-semibold">Integrations</h3>
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Slack</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Google Drive</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Jira</span></Link><br />
-              <Link href="#"><span className="text-gray-600 hover:text-gray-900">Zapier</span></Link>
-            </div>
-          </>
+            {/* Other product categories */}
+          </div>
         );
       default:
         return null;
     }
   };
 
+  const renderSolutions = () => {
+    switch (selectedSection) {
+      case 'Team':
+        return (
+          <div className="grid grid-cols-3 gap-6 p-6">
+            <div className="border border-gray-300 rounded-lg p-4 hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-gray-700 mb-2">Project Management</h3>
+              <p className="text-gray-500">Empower teams to achieve goals with efficient, clear project planning.</p>
+            </div>
+            {/* Other solutions categories */}
+          </div>
+        );
+      default:
+        return null;
+    }
+  };
+
+  const renderResourcesDropdown = () => {
+    return (
+      <div className="grid grid-cols-3 gap-x-10 p-6">
+        <div className="space-y-2">
+          <h3 className="font-semibold text-gray-700">Learn</h3>
+          <Link href="#"><span className="text-gray-500 hover:text-gray-900">University</span></Link><br />
+          {/* Other resources links */}
+        </div>
+      </div>
+    );
+  };
+
   return (
     <nav className="flex items-center justify-between px-6 py-4 shadow-md bg-white">
       {/* Section 1: ClickUp Logo and Text */}
-      <div className="flex items-center space-x-2 border border-gray-300 rounded-2xl px-12 py-1 ml-4 lg:ml-36 w-[250px] h-[50px]">
+      <div className="flex items-center space-x-2 border border-gray-300 rounded-2xl px-4 py-1 ml-4 lg:ml-36 w-[250px] h-[50px]">
         <img
           src="https://clickup.com/assets/brand/logo-v3-clickup-light.svg"
           alt="ClickUp"
@@ -145,12 +106,18 @@ const Navbar = () => {
           >
             Product
           </button>
-          <Link href="#">
-            <span className="text-gray-600 hover:text-gray-900">Solutions</span>
-          </Link>
-          <Link href="#">
-            <span className="text-gray-600 hover:text-gray-900">Resources</span>
-          </Link>
+          <button
+            onClick={toggleSolutionsDropdown}
+            className="text-gray-600 hover:text-gray-900"
+          >
+            Solutions
+          </button>
+          <button
+            onClick={toggleResourcesDropdown}
+            className="text-gray-600 hover:text-gray-900"
+          >
+            Resources
+          </button>
           <Link href="#">
             <span className="text-gray-600 hover:text-gray-900">Pricing</span>
           </Link>
@@ -161,8 +128,7 @@ const Navbar = () => {
 
         {/* Product Dropdown */}
         {isProductDropdownOpen && (
-          <div className="absolute bg-white shadow-lg border border-gray-300 rounded-lg mt-2 p-4 grid grid-cols-2 gap-4 w-[900px] z-10">
-            {/* Left column with buttons */}
+          <div className="absolute bg-white shadow-lg border border-gray-300 rounded-lg mt-2 p-6 grid grid-cols-4 gap-x-12 w-[1000px] z-10">
             <div className="flex flex-col space-y-4 items-start">
               <button
                 className={`px-4 py-2 rounded-lg ${selectedSection === 'Capabilities' ? 'bg-gray-300' : 'bg-gray-200'} hover:bg-gray-300`}
@@ -170,24 +136,36 @@ const Navbar = () => {
               >
                 Capabilities
               </button>
-              <button
-                className={`px-4 py-2 rounded-lg ${selectedSection === 'All Features' ? 'bg-gray-300' : 'bg-gray-200'} hover:bg-gray-300`}
-                onClick={() => handleSectionClick('All Features')}
-              >
-                All Features
-              </button>
-              <button
-                className={`px-4 py-2 rounded-lg ${selectedSection === 'Integrations' ? 'bg-gray-300' : 'bg-gray-200'} hover:bg-gray-300`}
-                onClick={() => handleSectionClick('Integrations')}
-              >
-                Integrations
-              </button>
+              {/* Other product buttons */}
             </div>
-
-            {/* Right columns showing products based on the selected section */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-3 gap-x-12">
               {renderProducts()}
             </div>
+          </div>
+        )}
+
+        {/* Solutions Dropdown */}
+        {isSolutionsDropdownOpen && (
+          <div className="absolute bg-white shadow-lg border border-gray-300 rounded-lg mt-2 p-6 grid grid-cols-4 gap-x-12 w-[1000px] z-10">
+            <div className="flex flex-col space-y-4 items-start">
+              <button
+                className={`px-4 py-2 rounded-lg ${selectedSection === 'Team' ? 'bg-gray-300' : 'bg-gray-200'} hover:bg-gray-300`}
+                onClick={() => handleSectionClick('Team')}
+              >
+                Team
+              </button>
+              {/* Other solutions buttons */}
+            </div>
+            <div className="grid grid-cols-3 gap-x-12">
+              {renderSolutions()}
+            </div>
+          </div>
+        )}
+
+        {/* Resources Dropdown */}
+        {isResourcesDropdownOpen && (
+          <div className="absolute bg-white shadow-lg border border-gray-300 rounded-lg mt-2 p-6 w-[1000px] z-10">
+            {renderResourcesDropdown()}
           </div>
         )}
       </div>
