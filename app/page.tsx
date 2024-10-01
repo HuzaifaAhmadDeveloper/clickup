@@ -1,6 +1,12 @@
-import Image from "next/image";
+import Navbar from "./components/Navbar/Navbar";
+// import Test from "./components/test/page";
 
 export default function Home() {
   return (
-    <h1>Huzaifa</h1>  );
+    <div>
+      <Navbar />
+      {/* Rest of the page */}
+      {/* <Test/> */}
+    </div>
+  );
 }
