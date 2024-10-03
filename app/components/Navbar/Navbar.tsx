@@ -41,45 +41,141 @@ const Navbar = () => {
           <div className="grid grid-cols-3 gap-x-40">
             <div className="space-y-2">
               <h3 className="font-semibold text-gray-700">Project Management</h3>
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Tasks</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Portfolios</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Board views</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Gantt charts</span></Link>
+              <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              📋 <span className="ml-2">Tasks</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              📁 <span className="ml-2">Portfolios</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              🗂️ <span className="ml-2">Board views</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              📅 <span className="ml-2">Gantt charts</span>
+            </span>
+          </Link>
             </div>
             <div className="space-y-2">
               <h3 className="font-semibold text-gray-700">Product Development</h3>
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Sprints</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Sprint Reports</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Kanban</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Roadmap & Backlog</span></Link>
+              <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              🔄 <span className="ml-2">Sprints</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              📝 <span className="ml-2">Sprint Reports</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              📊 <span className="ml-2">Kanban</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              🗂️ <span className="ml-2">Roadmap & Backlog</span>
+            </span>
+          </Link>
             </div>
             <div className="space-y-2">
               <h3 className="font-semibold text-gray-700">Knowledge Management</h3>
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Docs</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Wikis</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Ask AI</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Connected search</span></Link>
+              <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              📄 <span className="ml-2">Docs</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              📚 <span className="ml-2">Wikis</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              🤖 <span className="ml-2">Ask AI</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              🔍 <span className="ml-2">Connected search</span>
+            </span>
+          </Link>
             </div>
             <div className="space-y-2">
               <h3 className="font-semibold text-gray-700">Resource Management</h3>
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Time Tracking</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Workload views</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Goals</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Dashboards</span></Link>
+              <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              ⏱️ <span className="ml-2">Time Tracking</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              📊 <span className="ml-2">Workload views</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              🎯 <span className="ml-2">Goals</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              📈 <span className="ml-2">Dashboards</span>
+            </span>
+          </Link>
             </div>
             <div className="space-y-2">
               <h3 className="font-semibold text-gray-700">Collaboration</h3>
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Docs</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Whiteboards</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Chat</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Inbox</span></Link>
+              <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              📄 <span className="ml-2">Docs</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              🖍️ <span className="ml-2">Whiteboards</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              💬 <span className="ml-2">Chat</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              📥 <span className="ml-2">Inbox</span>
+            </span>
+          </Link>
             </div>
             <div className="space-y-2">
               <h3 className="font-semibold text-gray-700">Workflow</h3>
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Automations</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Forms</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Custom fields</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Custom statuses</span></Link>
+              <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              ⚙️ <span className="ml-2">Automations</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              📋 <span className="ml-2">Forms</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              🔧 <span className="ml-2">Custom fields</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              🛠️ <span className="ml-2">Custom statuses</span>
+            </span>
+          </Link>
             </div>
           </div>
         );
@@ -87,65 +183,214 @@ const Navbar = () => {
         return (
           <div className="grid grid-cols-3 gap-x-44">
             <div className="space-y-2">
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Tasks</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Docs</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Chat</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">AI</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Mind maps</span></Link>
+            <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            📝 <span className="ml-2 mt-2">Tasks</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            📄 <span className="ml-2 mt-2">Docs</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            💬 <span className="ml-2 mt-2">Chat</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            🤖 <span className="ml-2 mt-2">AI</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            🧠 <span className="ml-2 mt-2">Mind maps</span>
+            </span>
+          </Link>
             </div>
             <div className="space-y-2">
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Whiteboards</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Dashboards</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Gantt</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Proofing</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Email</span></Link>
+            <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            🖍️ <span className="ml-2 mt-2">Whiteboads</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            📊 <span className="ml-2 mt-2">Dashboard</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            📅 <span className="ml-2 mt-2">Gantt</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            🔍 <span className="ml-2 mt-2">Proofing</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            ✉️ <span className="ml-2 mt-2">Email</span>
+            </span>
+          </Link>
             </div>
             <div className="space-y-2">
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Automations</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Calendar View</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Goals</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Milestones</span></Link><br />
-              <Link href="#"><span className="text-gray-500 hover:text-gray-900">Time tracking</span></Link>
+            <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            🤖 <span className="ml-2 mt-2">Automations</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            📅 <span className="ml-2 mt-2">Calendar View</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            🎯 <span className="ml-2 mt-2">Goals</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            🏆 <span className="ml-2 mt-2">Milestones</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            ⏱️ <span className="ml-2 mt-2">Time tracking</span>
+            </span>
+          </Link>
+             
             </div>
           </div>
         );
       case 'Integrations':
         return (
           <div className="grid grid-cols-3 gap-x-44">
-          <div className="space-y-2">
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">ClickUp API</span></Link><br />
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Salesforce</span></Link><br />
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Hubspot</span></Link><br />
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Zendesk</span></Link><br />
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Zapier</span></Link><br />
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Make</span></Link><br />
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Trello</span></Link><br />
-            
+            <div className="space-y-2">
+            <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            🛠️ <span className="ml-2 mt-2">ClickUp API</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            💼 <span className="ml-2 mt-2">Salesforce</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            📊 <span className="ml-2 mt-2">Hubspot</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            🛠️ <span className="ml-2 mt-2">Zendesk</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            🤖 <span className="ml-2 mt-2">Zapier</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            🔧 <span className="ml-2 mt-2">Make</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            📋 <span className="ml-2 mt-2">Trello</span>
+            </span>
+          </Link>
+            </div>
+            <div className="space-y-2">
+            <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            💬 <span className="ml-2 mt-2">Slack</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            📁 <span className="ml-2 mt-2">Gsuite</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            📦 <span className="ml-2 mt-2">Dropbox</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            📹 <span className="ml-2 mt-2">Zoom</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            📹 <span className="ml-2 mt-2">Loom</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            💼 <span className="ml-2 mt-2">Microsoft Teams</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            📅 <span className="ml-2 mt-2">Calendly</span>
+            </span>
+          </Link>
+              
+            </div>
+            <div className="space-y-2">
+            <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            📊 <span className="ml-2 mt-2">Jira</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            🎨 <span className="ml-2 mt-2">Figma</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            💻 <span className="ml-2 mt-2">Github</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            💻 <span className="ml-2 mt-2">Gitlab</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            💻 <span className="ml-2 mt-2">Bitbucket</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            ⚠️ <span className="ml-2 mt-2">Sentry</span>
+            </span>
+          </Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+            🕒 <span className="ml-2 mt-2">Toggl</span>
+            </span>
+          </Link>
+              
+            </div>
           </div>
-          <div className="space-y-2">
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Slack</span></Link><br />
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Gsuite</span></Link><br />
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Dropbox</span></Link><br />
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Zoom</span></Link><br />
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Loom</span></Link><br />
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Microsoft Teams</span></Link><br />
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Calendly</span></Link>
-          </div>
-          <div className="space-y-2">
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Jira</span></Link><br />
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Figma</span></Link><br />
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Github</span></Link><br />
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Gitlab</span></Link><br />
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Bitbuket</span></Link><br />
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Sentry</span></Link><br />
-            <Link href="#"><span className="text-gray-500 hover:text-gray-900">Toggl</span></Link>
-          </div>
-        </div>
         );
       default:
         return null;
     }
   };
+  
+  
+  
 
   const renderSolutions = () => {
     switch (isSelected) {
@@ -193,29 +438,70 @@ const Navbar = () => {
     
   const renderResourcesDropdown = () => {
     return (
-      <div className="grid grid-cols-3 gap-x-10 p-6">
+      <div className="grid grid-cols-3 gap-x-2 p-1">
         <div className="space-y-2">
           <h3 className="font-semibold text-gray-700">Learn</h3>
-          <Link href="#"><span className="text-gray-500 hover:text-gray-900">University</span></Link><br />
-          <Link href="#"><span className="text-gray-500 hover:text-gray-900">Demos</span></Link><br />
-          <Link href="#"><span className="text-gray-500 hover:text-gray-900">Video tutorials</span></Link><br />
-          <Link href="#"><span className="text-gray-500 hover:text-gray-900">Webinars</span></Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              📚 <span className="ml-2">University</span>
+            </span>
+          </Link><br />
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              🖥️ <span className="ml-2">Demos</span>
+            </span>
+          </Link><br />
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              🎥 <span className="ml-2">Video tutorials</span>
+            </span>
+          </Link><br />
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              📅 <span className="ml-2">Webinars</span>
+            </span>
+          </Link>
         </div>
         <div className="space-y-2">
           <h3 className="font-semibold text-gray-700">Discover</h3>
-          <Link href="#"><span className="text-gray-500 hover:text-gray-900">Blog</span></Link><br />
-          <Link href="#"><span className="text-gray-500 hover:text-gray-900">Customer stories</span></Link><br />
-          <Link href="#"><span className="text-gray-500 hover:text-gray-900">Virtual Summits</span></Link><br />
-          <Link href="#"><span className="text-gray-500 hover:text-gray-900">Productivity quiz</span></Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              📝 <span className="ml-2">Blog</span>
+            </span>
+          </Link><br />
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              👥 <span className="ml-2">Customer stories</span>
+            </span>
+          </Link><br />
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              🌐 <span className="ml-2">Virtual Summits</span>
+            </span>
+          </Link><br />
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              🧩 <span className="ml-2">Productivity quiz</span>
+            </span>
+          </Link>
         </div>
         <div className="space-y-2">
           <h3 className="font-semibold text-gray-700">Services</h3>
-          <Link href="#"><span className="text-gray-500 hover:text-gray-900">Partner services</span></Link><br />
-          <Link href="#"><span className="text-gray-500 hover:text-gray-900">Professional services</span></Link>
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              🤝 <span className="ml-2">Partner services</span>
+            </span>
+          </Link><br />
+          <Link href="#">
+            <span className="flex items-center text-gray-500 hover:text-gray-900">
+              🛠️ <span className="ml-2">Professional services</span>
+            </span>
+          </Link>
         </div>
       </div>
     );
   };
+  
   
 
   return (
@@ -244,12 +530,20 @@ const Navbar = () => {
             Product
             <MdArrowDropDown className={`ml-1 transition-transform ${isProductDropdownOpen ? 'rotate-180' : ''}`} />
           </button>
-          <Link href="#" className='flex items-center'>
-            <span className="text-gray-600 hover:text-gray-900">Solutions</span><MdArrowDropDown />
-          </Link>
-          <Link href="#" className='flex items-center'>
-            <span className="text-gray-600 hover:text-gray-900">Resources</span><MdArrowDropDown />
-          </Link>
+          <button
+            onClick={toggleSolutionsDropdown}
+            className="flex items-center text-gray-600 hover:text-gray-900 "
+          >
+            Solutions
+            <MdArrowDropDown className={`ml-1 transition-transform ${isSolutionsDropdownOpen ? 'rotate-180' : ''}`} />
+          </button>
+          <button
+            onClick={toggleResourcesDropdown}
+            className="flex items-center text-gray-600 hover:text-gray-900 "
+          >
+            Resources
+            <MdArrowDropDown className={`ml-1 transition-transform ${isResourcesDropdownOpen ? 'rotate-180' : ''}`} />
+          </button>
           <Link href="#">
             <span className="text-gray-600 hover:text-gray-900">Pricing</span>
           </Link>
@@ -260,7 +554,7 @@ const Navbar = () => {
 
         {/* Product Dropdown */}
         {isProductDropdownOpen && (
-          <div className="absolute bg-white shadow-lg border border-gray-300 rounded-lg mt-2 p-6 grid grid-cols-4 gap-x-12 w-[1000px] z-10">
+          <div className="absolute bg-white shadow-lg border border-gray-300 rounded-lg mt-3 p-6 grid grid-cols-4 gap-x-12 w-[750px] z-10">
             {/* Left column with buttons */}
             <div className="flex flex-col space-y-4 items-start">
               <button
@@ -292,7 +586,7 @@ const Navbar = () => {
 
         {/* Solutions Dropdown */}
         {isSolutionsDropdownOpen && (
-          <div className="absolute bg-white shadow-lg border border-gray-300 rounded-lg mt-2 p-6 grid grid-cols-4 gap-x-12 w-[1000px] z-10">
+          <div className="absolute bg-white shadow-lg border border-gray-300 rounded-lg mt-2 p-6 grid grid-cols-4 gap-x-12 w-[850px] z-10">
             {/* Left column with buttons */}
             <div className="flex flex-col space-y-4 items-start">
               <button
@@ -324,7 +618,7 @@ const Navbar = () => {
 
         {/* Resources Dropdown */}
         {isResourcesDropdownOpen && (
-          <div className="absolute bg-white shadow-lg border border-gray-300 rounded-lg mt-2 p-6 w-[1000px] z-10">
+          <div className="absolute bg-white shadow-lg border border-gray-300 rounded-lg mt-2 p-6 w-[700px] z-10">
             {renderResourcesDropdown()}
           </div>
         )}
