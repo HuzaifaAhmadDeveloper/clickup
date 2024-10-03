@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaSlack, FaMicrosoft, FaGithub, FaDropbox, FaSalesforce } from 'react-icons/fa';
 
 const ClickUpBrain = () => {
   return (

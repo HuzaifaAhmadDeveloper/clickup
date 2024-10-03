@@ -9,7 +9,7 @@ const Navbar = () => {
 
   // Declare the selectedSection state
   const [selectedSection, setSelectedSection] = useState('Capabilities');
-  const [isSelected, issetSelected] = useState('Team');
+  const [isSelected, setSelected] = useState('Team');
 
   const toggleProductDropdown = () => {
     setIsProductDropdownOpen(!isProductDropdownOpen);
